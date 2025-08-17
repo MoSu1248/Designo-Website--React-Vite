@@ -1,0 +1,36 @@
+@use "../../styles/variables" as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0rem;
+    .logo{
+        height: 2rem;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.nav{
+    width: 30%;
+
+    .nav__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+
+        .nav__item{
+
+            .nav__link{
+                color: var(--black);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 400;
+                letter-spacing: map-get($letter-spacing, h2);
+            }
+        }
+    }
+}
