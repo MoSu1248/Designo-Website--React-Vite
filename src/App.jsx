@@ -12,10 +12,15 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-   <BrowserRouter basename="/Designo-Website--React-Vite">
+    <BrowserRouter basename="/Designo-Website--React-Vite">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<About />} /> {/* index route renders at "/" */}
+          {/* index route renders at "/" */}
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="location" element={<Locations />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

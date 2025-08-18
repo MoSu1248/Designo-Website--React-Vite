@@ -1,7 +1,10 @@
 import React from 'react'
+import './about.scss'
+
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <div className='about'>Contact</div>
+
   )
 }

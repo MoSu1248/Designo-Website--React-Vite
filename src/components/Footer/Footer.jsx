@@ -9,14 +9,14 @@ import "./footer.scss";
 export default function Footer() {
   return (
     <footer className="footer">
-        <Contact />
-      <Layout>
+      <Contact />
+      <div className="footer-container">
         <FooterNav />
         <div className="footer__content">
           <FooterInfo />
           <FooterSocial />
         </div>
-      </Layout>
+      </div>
     </footer>
   );
 }
