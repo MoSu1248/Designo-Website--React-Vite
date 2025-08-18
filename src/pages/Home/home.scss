@@ -37,7 +37,6 @@
         &-text{
             line-height: map-get($map: $text-line-height, $key: p );
             font-size: var(--p-font-size);
-            font-weight: var();
         }
 
         &-btn{
