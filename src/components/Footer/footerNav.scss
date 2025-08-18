@@ -1,21 +1,9 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as * ;
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 0rem;
-    .logo{
-        height: 1.6rem;
-        img{
-            height: 100%;
-        }
-    }
-}
+/*  FOOTER NAV STYLING*/
 
-.nav{
+.navbar--footer {
     width: 40%;
-
     .nav__list{
         display: flex;
         justify-content: space-between;
@@ -25,7 +13,7 @@
         .nav__item{
 
             .nav__link{
-                color: var(--black);
+                color: var(--white);
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: 400;

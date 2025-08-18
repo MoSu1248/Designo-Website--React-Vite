@@ -1,0 +1,16 @@
+@use '../../styles/variables' as * ;
+
+
+.footer{
+    background-color: var(--black);
+     padding-top: 5rem;
+     position: relative;
+
+    .footer__content{
+        border-top: 1px solid var(--light-grey);
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}

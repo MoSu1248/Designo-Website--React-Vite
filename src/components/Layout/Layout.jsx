@@ -1,7 +1,17 @@
-import "./layout.scss"
+import "./layout.scss";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
-export default function Layout({ children }) {
-  return <div className="content-wrapper">{children}</div>;
+import { Outlet } from "react-router-dom";
+
+export default function Layout() {
+  return (
+    <div className="content-wrapper">
+      <Navbar />
+        <main>
+          <div>Hello Layout</div>
+        </main>
+      <Footer />
+    </div>
+  );
 }
-
-

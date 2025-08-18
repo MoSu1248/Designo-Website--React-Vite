@@ -1,7 +1,7 @@
 /* index.scss */
 
 /* 1. Variables + Mixins first (foundation) */
-@use "variables" as *;   // allows you to use variables directly
+@use "variables" as *; // allows you to use variables directly
 @use "mixins" as *;
 
 /* 2. Base styles (reset, normalize, box-sizing) */
