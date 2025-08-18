@@ -95,7 +95,7 @@ export default function Home() {
           </div>
           <h3>Friendly</h3>
           <p>
-            {" "}
+            
             We are a group of enthusiastic folks who know how to put people
             first. Our success depends on our customers, and we strive to give
             them the best experience a company can provide.

@@ -1,10 +1,16 @@
 import React from "react";
 import "./about.scss";
 import HeroBackground from "../../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
+import InformationBack from "../../assets/shared/desktop/bg-pattern-two-circles.svg"
+import Canada from "../../assets/shared/desktop/illustration-canada.svg"
+import Australia from "../../assets/shared/desktop/illustration-australia.svg"
+import UnitedKingdom from "../../assets/shared/desktop/illustration-united-kingdom.svg"
+
+
 
 export default function About() {
   return (
-    <main className="about">
+    <main className="main">
       <section className="about__hero">
         <div className="about__content">
           <img src={HeroBackground} alt="" className="about__background" />
@@ -37,31 +43,35 @@ export default function About() {
             have always been impressed with our high-quality outcomes that
             encapsulates their brand’s story and mission.
           </p>
+          <img src={InformationBack} alt="" className="information__text-background"/>
         </div>
       </section>
 
       <section className="locations">
-        <div className="details__content">
-          <div className="details__content-img passion-img">
-            <img src="" alt="" />
+
+        <article className="details__content">
+          <div className="details__content-img canada">
+            <img src={Canada} alt="" />
           </div>
-          <h3>Passionate</h3>
-          <button>Canada</button>
-        </div>
-        <div className="details__content">
-          <div className="details__content-img passion-img">
-            <img src="" alt="" />
+          <h3>Canada</h3>
+          <button>See location</button>
+        </article>
+
+        <article className="details__content">
+          <div className="details__content-img australia">
+            <img src={Australia} alt="" />
           </div>
-          <h3>Passionate</h3>
-          <button>Canada</button>
-        </div>
-        <div className="details__content">
-          <div className="details__content-img passion-img">
-            <img src="" alt="" />
+          <h3>Australia</h3>
+          <button>See location</button>
+        </article>
+
+        <article className="details__content">
+          <div className="details__content-img unitedKingdom">
+            <img src={UnitedKingdom} alt="" />
           </div>
-          <h3>Passionate</h3>
-          <button>Canada</button>
-        </div>
+          <h3>United Kingdom</h3>
+          <button>See location</button>
+        </article>
       </section>
 
       <section className="objective">
@@ -79,6 +89,7 @@ export default function About() {
             combining business and marketing strategies, we inspire audiences to
             take action and drive real results.
           </p>
+            <img src={InformationBack} alt="" className="objective__text-background"/>
         </div>
         <div className="objective__img"></div>
       </section>
