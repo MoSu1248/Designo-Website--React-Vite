@@ -1,0 +1,25 @@
+@use "../../styles/variables" as *;
+
+.category-buttons {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  height: 35vh;
+
+  .card__app-designs {
+    background-image: url(../../assets/home/desktop/image-app-design.jpg);
+  }
+
+  .card__web-designs {
+    background-image: url(../../assets/home/desktop/image-web-design-small.jpg);
+  }
+
+  .card__graphic-designs {
+    background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
+  }
+
+  .card__test {
+    background-color: red;
+  }
+}

@@ -97,39 +97,6 @@
   }
 }
 
-/* ABOUT SECTION LOCATIONS */
-
-.locations {
-  height: 50vh;
-  display: flex;
-  justify-content: space-between;
-
-    .canada:after{
-        transform: rotate(90deg); /* rotation */
-    }
-    .australia:after{
-        transform: rotate(0deg); /* rotation */
-    }
-    .unitedKingdom:after{
-        transform: rotate(-90deg); /* rotation */
-    }
-
-  button{
-            background-color: var(--peach);
-            color: var(--white);
-            text-transform: uppercase;
-            font-weight: var(--font-weight-medium);
-            font-family: var(--font-family);
-            width: fit-content;
-            border: none;
-            border-radius: 8px;
-            letter-spacing: 1px;
-            height: 56px;
-            width: 152px;
-            cursor: pointer;
-  }
-}
-
 .objective {
   height: 60vh;
   background-color: var(--background-grey);

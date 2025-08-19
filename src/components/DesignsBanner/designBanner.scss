@@ -1,0 +1,41 @@
+@use "../../styles/variables" as *;
+
+.banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: var(--peach);
+  padding: 4rem 0;
+  height: 25vh;
+  margin-top: 5rem;
+  color: var(--white);
+  overflow: hidden;
+  position: relative;
+  .banner__content {
+    z-index: 2;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-regular);
+    line-height: map-get($map: $text-line-height, $key: h1);
+    z-index: 2;
+  }
+
+  p {
+    line-height: map-get($map: $text-line-height, $key: p);
+    font-size: var(--p-font-size);
+    width: 70%;
+    margin: 1rem auto;
+  }
+}
+
+.banner__background {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+}

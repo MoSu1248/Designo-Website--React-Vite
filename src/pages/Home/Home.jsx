@@ -6,6 +6,7 @@ import RightArrow from "../../assets/shared/desktop/icon-right-arrow.svg";
 import Passionate__img from "../../assets/home/desktop/illustration-passionate.svg";
 import Resourceful__img from "../../assets/home/desktop/illustration-resourceful.svg";
 import Friendly__img from "../../assets/home/desktop/illustration-friendly.svg";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -35,32 +36,32 @@ export default function Home() {
       <section className="projects">
         <article className="card card_web">
           <h2>Web design</h2>
-          <a href="">
+          <NavLink to={"web-designs"}>
             view projects{" "}
             <span>
               <img src={RightArrow} />
             </span>
-          </a>
+          </NavLink>
         </article>
 
         <article className="card card_graphic">
           <h2>App design</h2>
-          <a href="">
+          <NavLink to={"app-designs"}>
             view projects{" "}
             <span>
               <img src={RightArrow} />
             </span>
-          </a>
+          </NavLink>
         </article>
 
         <article className="card card_app">
           <h2>Graphic design</h2>
-          <a href="">
+          <NavLink to={"graphic-designs"}>
             view projects{" "}
             <span>
               <img src={RightArrow} />
             </span>
-          </a>
+          </NavLink>
         </article>
       </section>
 
@@ -95,7 +96,6 @@ export default function Home() {
           </div>
           <h3>Friendly</h3>
           <p>
-            
             We are a group of enthusiastic folks who know how to put people
             first. Our success depends on our customers, and we strive to give
             them the best experience a company can provide.

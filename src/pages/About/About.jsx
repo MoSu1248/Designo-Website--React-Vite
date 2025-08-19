@@ -1,12 +1,8 @@
 import React from "react";
 import "./about.scss";
 import HeroBackground from "../../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
-import InformationBack from "../../assets/shared/desktop/bg-pattern-two-circles.svg"
-import Canada from "../../assets/shared/desktop/illustration-canada.svg"
-import Australia from "../../assets/shared/desktop/illustration-australia.svg"
-import UnitedKingdom from "../../assets/shared/desktop/illustration-united-kingdom.svg"
-
-
+import InformationBack from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
+import Locations from "../../components/Locations/Locations";
 
 export default function About() {
   return (
@@ -43,36 +39,15 @@ export default function About() {
             have always been impressed with our high-quality outcomes that
             encapsulates their brand’s story and mission.
           </p>
-          <img src={InformationBack} alt="" className="information__text-background"/>
+          <img
+            src={InformationBack}
+            alt=""
+            className="information__text-background"
+          />
         </div>
       </section>
 
-      <section className="locations">
-
-        <article className="details__content">
-          <div className="details__content-img canada">
-            <img src={Canada} alt="" />
-          </div>
-          <h3>Canada</h3>
-          <button>See location</button>
-        </article>
-
-        <article className="details__content">
-          <div className="details__content-img australia">
-            <img src={Australia} alt="" />
-          </div>
-          <h3>Australia</h3>
-          <button>See location</button>
-        </article>
-
-        <article className="details__content">
-          <div className="details__content-img unitedKingdom">
-            <img src={UnitedKingdom} alt="" />
-          </div>
-          <h3>United Kingdom</h3>
-          <button>See location</button>
-        </article>
-      </section>
+      <Locations />
 
       <section className="objective">
         <div className="objective__content">
@@ -89,7 +64,11 @@ export default function About() {
             combining business and marketing strategies, we inspire audiences to
             take action and drive real results.
           </p>
-            <img src={InformationBack} alt="" className="objective__text-background"/>
+          <img
+            src={InformationBack}
+            alt=""
+            className="objective__text-background"
+          />
         </div>
         <div className="objective__img"></div>
       </section>

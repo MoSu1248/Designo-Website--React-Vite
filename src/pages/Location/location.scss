@@ -1,0 +1,79 @@
+@use "../../styles/variables" as *;
+
+.location {
+  height: fit-content;
+  margin: 10vh 0 40vh 0;
+}
+
+.location__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.location__card {
+  display: flex;
+  justify-content: space-between;
+  height: 30vh;
+  border-radius: 15px;
+  gap: 2rem;
+  position: relative;
+
+  .location__img-container {
+    height: 100%;
+    border-radius: 15px;
+
+    .location__img {
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+}
+
+.location__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-grey);
+  padding: 4rem;
+  border-radius: 15px;
+  position: relative;
+  h2 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--h2-font-size);
+    letter-spacing: map-get($map: $letter-spacing, $key: h2);
+    line-height: map-get($map: $text-line-height, $key: h2);
+    color: var(--peach);
+  }
+
+  .location__info-container {
+    display: flex;
+
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--p-font-size);
+      line-height: map-get($map: $text-line-height, $key: p1);
+    }
+
+    .location__header {
+      font-weight: var(--font-weight-medium);
+    }
+  }
+}
+.location__text-background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 0;
+}
+
+.location__card:nth-child(2) {
+  flex-direction: row-reverse; // or tweak grid-template-areas
+}
