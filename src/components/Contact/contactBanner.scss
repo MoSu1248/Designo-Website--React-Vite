@@ -1,0 +1,43 @@
+@use "../../styles/index" as *;
+
+.contact {
+  background-color: var(--peach);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: -80px;
+  left: 50%;
+  width: 1110px;
+  height: 18rem;
+  border-radius: 15px;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 4rem;
+
+  .contact__content {
+    color: var(--white);
+    width: 50%;
+
+    h2 {
+      @include h2-styling(var(--white));
+      width: 70%;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @include p-styling(var(--white));
+    }
+  }
+
+  .contact__background {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+  }
+
+  .contact__btn-styling {
+    @include white-btn();
+    z-index: 2;
+  }
+}

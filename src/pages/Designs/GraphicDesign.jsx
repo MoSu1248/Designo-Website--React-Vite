@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../../components/Card/DesignCard";
 import { designCategories } from "../../data/DesignCatagories";
-import CategoryButtons from "../../components/CatagoryBtns/CatBtns";
+import CategoryButtons from "../../components/CatagoryBtns/CatagoryBtns";
 import Banner from "../../components/DesignsBanner/DesignBanner";
 
 import "./design.scss";

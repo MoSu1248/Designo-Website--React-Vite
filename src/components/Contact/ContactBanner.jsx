@@ -1,6 +1,8 @@
 import React from "react";
-import ContactBack from "../../assets/shared/desktop/bg-pattern-call-to-action.svg"
-import "./contact.scss";
+import ContactBack from "../../assets/shared/desktop/bg-pattern-call-to-action.svg";
+import {  NavLink } from "react-router-dom";
+import "./contactBanner.scss";
+
 export default function Contact() {
   return (
     <div className="contact">
@@ -11,10 +13,9 @@ export default function Contact() {
           our expertise can help your business grow.
         </p>
       </div>
-        <img src={ContactBack} alt="" className="contact__background"/>
-      
-        <button className="contact__btn-styling">Get in touch</button>
-      
+      <img src={ContactBack} alt="" className="contact__background" />
+
+      <NavLink className="contact__btn-styling">Get in touch</NavLink>
     </div>
   );
 }

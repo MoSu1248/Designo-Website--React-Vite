@@ -1,9 +1,11 @@
-@use "../../styles/variables" as *;
+@use "../../styles/index" as *;
 
 .design__card {
   border-radius: 15px;
   background-color: var(--background-grey);
   text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
   img {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -14,16 +16,27 @@
   .design__text {
     padding: 2rem;
     h3 {
-      color: var(--peach);
       text-transform: uppercase;
-      font-size: var(--h3-font-size);
-      font-weight: var(--font-weight-medium);
-      letter-spacing: map-get($map: $letter-spacing, $key: h3);
+
+      @include h3-styling(var(--peach));
     }
 
     p {
-      font-size: var(--p-font-size);
-      font-weight: var(--font-weight-regular);
+      @include p-styling(var(--dark-grey));
+    }
+  }
+
+  &:hover {
+    background-color: var(--peach);
+
+    h3 {
+      text-transform: uppercase;
+
+      @include h3-styling(var(--white));
+    }
+
+    p {
+      @include p-styling(var(--white));
     }
   }
 }

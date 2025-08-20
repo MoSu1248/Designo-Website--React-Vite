@@ -1,0 +1,71 @@
+@use "../../styles/index" as *;
+
+/* PROJECTS SECTION STYLING */
+
+.projects {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  height: 70vh;
+}
+
+.card {
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  cursor: pointer;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.74);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  &.card_web {
+    grid-row: span 2;
+    background-image: url(../../assets/home/desktop/image-web-design-large.jpg);
+  }
+  &.card_graphic {
+    background-image: url(../../assets/home/desktop/image-app-design.jpg);
+  }
+  &.card_app {
+    background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
+  }
+  h2 {
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--h2-font-size);
+    letter-spacing: map-get($map: $letter-spacing, $key: h2);
+    line-height: map-get($map: $text-line-height, $key: h2);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: var(--white);
+    text-decoration: none;
+    z-index: 1;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: 5px;
+    font-size: var(--p-font-size);
+  }
+
+  &:hover:after{
+    background-color: var(--peach-hover);
+  }
+}

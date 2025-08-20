@@ -1,8 +1,8 @@
 /* index.scss */
 
-/* 1. Variables + Mixins first (foundation) */
-@use "variables" as *; // allows you to use variables directly
-@use "mixins" as *;
+/* 1. Re-export foundations */
+@forward "./variables";
+@forward "./mixins";
 
-/* 2. Base styles (reset, normalize, box-sizing) */
-@use "globals";
+/* 2. Local stuff that doesn’t need forwarding */
+@use "./globals";

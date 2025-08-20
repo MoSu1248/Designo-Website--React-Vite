@@ -1,0 +1,59 @@
+@use "../../styles/index" as *;
+
+/* HERO SECTION STYLING */
+
+.hero {
+  margin-top: 2rem;
+  height: 65vh;
+  background-color: var(--peach);
+  border-radius: 0.938rem;
+  display: flex;
+  overflow: hidden;
+
+  &__content {
+    color: var(--white);
+    width: 70%;
+    padding: 8rem 0rem 8rem 6rem;
+    display: flex;
+    gap: 2rem;
+
+    flex-direction: column;
+
+    &-heading {
+      font-size: var(--h1-font-size);
+      font-weight: var(--font-weight-regular);
+      line-height: map-get($map: $text-line-height, $key: h1);
+    }
+
+    &-text {
+      line-height: map-get($map: $text-line-height, $key: p);
+      font-size: var(--p-font-size);
+    }
+
+    &-btn {
+    @include white-btn();
+    }
+  }
+
+  &__img {
+    height: 100%;
+    background-repeat: no-repeat;
+    width: 50%;
+    z-index: 0;
+    position: relative;
+
+    &-background {
+      position: absolute;
+      height: 100%;
+      width: 120%;
+      left: -110px; /* adjust horizontal positioning */
+      z-index: 1; /* behind the phone */
+    }
+
+    &-phone {
+      top: -20px;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

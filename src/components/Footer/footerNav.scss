@@ -1,24 +1,47 @@
-@use '../../styles/variables' as * ;
+@use "../../styles/variables" as *;
 
 /*  FOOTER NAV STYLING*/
 
 .navbar--footer {
-    width: 40%;
-    .nav__list{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none;
+  width: 40%;
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 
-        .nav__item{
+    .nav__item {
+      .nav__link {
+        color: var(--white);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: map-get($letter-spacing, h2);
+      }
 
-            .nav__link{
-                color: var(--white);
-                text-decoration: none;
-                text-transform: uppercase;
-                font-weight: 400;
-                letter-spacing: map-get($letter-spacing, h2);
-            }
-        }
+      .nav__link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: var(--white);
+
+        /* Hiding via transform instead of display */
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+      }
+
+      .nav__link:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav__link:hover::after,
+      .nav__link.active::after {
+        transform: scaleX(1);
+      }
     }
+  }
 }

@@ -1,0 +1,76 @@
+@use "./variables" as *;
+
+@mixin h1-styling($color: white) {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-regular);
+  line-height: map-get($map: $text-line-height, $key: h1);
+  color: $color;
+}
+
+@mixin h2-styling($color: white) {
+  z-index: 1;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--h2-font-size);
+  letter-spacing: map-get($map: $letter-spacing, $key: h2);
+  line-height: map-get($map: $text-line-height, $key: h2);
+  color: $color;
+}
+
+@mixin h3-styling($color: white) {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: map-get($map: $letter-spacing, $key: h3);
+  color: $color;
+}
+
+@mixin p-styling($color: white) {
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-regular);
+  color: $color;
+}
+
+@mixin white-btn() {
+  background-color: var(--white);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  padding: 1rem;
+  width: fit-content;
+  min-width: 152px;
+  cursor: pointer;
+  color: var(--dark-grey);
+  transition: 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+  &:hover {
+    background-color: var(--peach-light);
+    color: var(--white);
+  }
+}
+
+@mixin peach-btn() {
+  background-color: var(--peach);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family);
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  padding: 1rem;
+  min-width: 152px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  &:hover {
+    background-color: var(--peach-light);
+  }
+}

@@ -1,13 +1,21 @@
-.socialMedia{
-    
-    margin: auto 0;
-    width: 20%;
+.socialMedia {
+  margin: auto 0;
+  width: 20%;
+  height: 100%;
+  ul {
     height: 100%;
-    ul{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        list-style: none;
-        justify-content: space-between;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    
+    .icon {
+      fill: var(--peach);
+      transition: 0.3s ease;
     }
+
+    .icon:hover {
+      fill: var(--peach-light);
+    }
+  }
 }

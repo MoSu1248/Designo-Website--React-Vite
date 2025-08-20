@@ -1,0 +1,15 @@
+@use "../../styles/index" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0rem;
+
+  .logo {
+    height: 1.6rem;
+    img {
+      height: 100%;
+    }
+  }
+}

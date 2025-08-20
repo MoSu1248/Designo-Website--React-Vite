@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use "../../styles/index" as *;
 
 /* ABOUT SECTION LOCATIONS */
 
@@ -7,28 +7,17 @@
   display: flex;
   justify-content: space-between;
 
-    .canada:after{
-        transform: rotate(90deg); /* rotation */
-    }
-    .australia:after{
-        transform: rotate(0deg); /* rotation */
-    }
-    .unitedKingdom:after{
-        transform: rotate(-90deg); /* rotation */
-    }
+  .canada:after {
+    transform: rotate(90deg); /* rotation */
+  }
+  .australia:after {
+    transform: rotate(0deg); /* rotation */
+  }
+  .unitedKingdom:after {
+    transform: rotate(-90deg); /* rotation */
+  }
 
-  button{
-            background-color: var(--peach);
-            color: var(--white);
-            text-transform: uppercase;
-            font-weight: var(--font-weight-medium);
-            font-family: var(--font-family);
-            width: fit-content;
-            border: none;
-            border-radius: 8px;
-            letter-spacing: 1px;
-            height: 56px;
-            width: 152px;
-            cursor: pointer;
+  .locations__btn {
+    @include peach-btn();
   }
 }

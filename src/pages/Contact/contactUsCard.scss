@@ -1,0 +1,33 @@
+@use "../../styles/index" as *;
+
+.contactUs__card {
+  background-color: var(--peach);
+  border-radius: 15px;
+  height: 30rem;
+  display: flex;
+
+  position: relative;
+  overflow: hidden;
+
+  &-background {
+    position: absolute;
+    height: 130%;
+    bottom: 0;
+  }
+}
+
+.contactUs__text {
+  width: 60%;
+  padding: 8rem 6rem;
+  h1 {
+    @include h1-styling(var(--white));
+  }
+
+  p {
+    @include p-styling(var(--white));
+    width: 92%;
+    margin-top: 2rem;
+  }
+}
+
+

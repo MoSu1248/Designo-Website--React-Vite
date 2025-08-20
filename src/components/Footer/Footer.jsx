@@ -3,7 +3,7 @@ import FooterNav from "./FooterNav";
 import Layout from "../Layout/Layout";
 import FooterSocial from "./FooterSocial";
 import FooterInfo from "./FooterInfo";
-import Contact from "../Contact/Contact";
+import Contact from "../Contact/ContactBanner";
 import "./footer.scss";
 
 export default function Footer() {

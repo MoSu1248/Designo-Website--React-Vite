@@ -1,4 +1,10 @@
-.contactUs{
-    height: fit-content;
-    margin-bottom: 50vh;
+@use "../../styles/index" as *;
+
+.contactUs {
+  margin-top: 2rem;
+  height: fit-content;
+  margin-bottom: 50vh;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
