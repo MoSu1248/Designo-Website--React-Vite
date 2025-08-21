@@ -6,11 +6,25 @@
   text-align: center;
   transition: 0.3s ease;
   cursor: pointer;
+
+  @include for-tablet-up {
+    height: 30rem;
+    display: flex;
+  }
   img {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     max-height: 60%;
     width: 100%;
+    @include for-tablet-up {
+      border: 0 !important;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      max-height: 100%;
+      display: flex;
+      width: 50%;
+    }
   }
 
   .design__text {
@@ -23,6 +37,15 @@
 
     p {
       @include p-styling(var(--dark-grey));
+    }
+
+    @include for-tablet-up {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 

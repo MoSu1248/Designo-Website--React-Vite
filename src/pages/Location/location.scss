@@ -3,6 +3,11 @@
 .location {
   height: fit-content;
   margin: 2rem 0 25rem 0;
+
+  @include for-tablet-up {
+    margin-bottom: 40rem;
+    gap: 2rem;
+  }
 }
 
 .location__cards {
@@ -19,13 +24,28 @@
   gap: 2rem;
   position: relative;
 
+  @include for-tablet-up {
+    height: fit-content;
+    flex-direction: column;
+  }
+
   .location__img-container {
     height: 100%;
     border-radius: 15px;
 
+    @include for-tablet-up {
+      order: 1;
+      height: 50%;
+
+      width: 100%;
+    }
+
     .location__img {
       height: 100%;
       border-radius: 15px;
+      @include for-tablet-up {
+        width: 100%;
+      }
     }
   }
 }
@@ -38,6 +58,9 @@
   padding: 4rem;
   border-radius: 15px;
   position: relative;
+  @include for-tablet-up {
+    order: 2;
+  }
   h2 {
     @include h2-styling(var(--peach));
   }
@@ -48,6 +71,11 @@
     align-items: center;
     gap: 5rem;
     height: 100%;
+
+    @include for-tablet-up {
+      height: 50%;
+      width: 100%;
+    }
 
     p {
       display: flex;
@@ -72,4 +100,7 @@
 
 .location__card:nth-child(2) {
   flex-direction: row-reverse; // or tweak grid-template-areas
+  @include for-tablet-up {
+    flex-direction: column;
+  }
 }

@@ -2,6 +2,10 @@ import CanadaMap from "../assets/locations/desktop/image-map-canada.png";
 import AustraliaMap from "../assets/locations/desktop/image-map-australia.png";
 import UkMap from "../assets/locations/desktop/image-map-united-kingdom.png";
 
+import CanadaTablet from "../assets/locations/tablet/image-map-canada.png";
+import AustraliaTablet from "../assets/locations/tablet/image-map-australia.png";
+import UkTablet from "../assets/locations/tablet/image-map-uk.png";
+
 export const info = [
   {
     destinations: [
@@ -17,6 +21,7 @@ export const info = [
           area: "Toronto, Ontario M9C 3J5",
         },
         url: CanadaMap,
+        urlTablet: CanadaTablet,
       },
       {
         name: "Australia",
@@ -30,6 +35,7 @@ export const info = [
           area: "New South Wales 2443",
         },
         url: AustraliaMap,
+        urlTablet: AustraliaTablet,
       },
       {
         name: "United Kingdom",
@@ -43,6 +49,7 @@ export const info = [
           area: "Rhyd-y-fro SA8 9GA",
         },
         url: UkMap,
+        urlTablet: UkTablet,
       },
     ],
   },

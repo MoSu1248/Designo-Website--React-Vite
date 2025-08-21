@@ -1,5 +1,4 @@
-@use "../../styles/variables" as *;
-
+@use "../../styles/index" as *;
 
 .objective {
   height: 60vh;
@@ -7,10 +6,21 @@
   display: flex;
   border-radius: 15px;
   align-items: center;
-  margin-bottom: 25rem;
+
+  @include for-tablet-up {
+    height: 90vh;
+    flex-direction: column;
+
+    h2 {
+    }
+
+    p {
+      width: 100%;
+    }
+  }
 
   .objective__content {
-    width: 55%;
+    width: 60%;
     height: 100%;
     padding: 8rem 5.2rem;
     display: flex;
@@ -18,10 +28,26 @@
     position: relative;
     gap: 1rem;
 
+    @include for-tablet-up {
+      padding: 2rem 5.2rem;
+      height: 55%;
+      width: 100%;
+      order: 2;
+      text-align: center;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
     .objective__text-background {
       position: absolute;
       bottom: 0;
       left: 0;
+
+      @include for-tablet-up {
+        
+        left: 250px;
+        bottom: 50px;
+      }
     }
 
     h2 {
@@ -38,9 +64,20 @@
 
   .objective__img {
     background-image: url(../../assets/about/desktop/image-real-deal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 45%;
     height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    @include for-tablet-up {
+      border-radius: 0;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      width: 100%;
+      height: 40%;
+      order: 0;
+      background-image: url(../../assets/about/tablet/image-real-deal.jpg);
+    }
   }
 }

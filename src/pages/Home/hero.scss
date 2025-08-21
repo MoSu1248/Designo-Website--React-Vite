@@ -10,28 +10,56 @@
   display: flex;
   overflow: hidden;
 
+  @include for-tablet-up {
+    height: 100vh;
+
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__content {
     color: var(--white);
     width: 70%;
     padding: 8rem 0rem 8rem 6rem;
     display: flex;
     gap: 2rem;
-
     flex-direction: column;
+
+    @include for-tablet-up {
+      padding: 0rem;
+      width: 100%;
+    }
 
     &-heading {
       font-size: var(--h1-font-size);
       font-weight: var(--font-weight-regular);
       line-height: map-get($map: $text-line-height, $key: h1);
+      @include for-tablet-up {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        margin-top: 5rem;
+      }
     }
 
     &-text {
       line-height: map-get($map: $text-line-height, $key: p);
       font-size: var(--p-font-size);
+      @include for-tablet-up {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+      }
     }
 
     &-btn {
-    @include white-btn();
+      @include white-btn();
+
+      @include for-tablet-up {
+        text-align: center;
+
+        margin: auto;
+      }
     }
   }
 
@@ -48,12 +76,33 @@
       width: 120%;
       left: -110px; /* adjust horizontal positioning */
       z-index: 1; /* behind the phone */
+
+      @include for-tablet-up {
+        left: 280px;
+        position: absolute;
+        top: -320px;
+        width: 80%;
+        height: 120%;
+      }
     }
 
     &-phone {
       top: -20px;
       position: relative;
       z-index: 2;
+
+      @include for-tablet-up {
+        top: -100px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+      }
+    }
+
+    @include for-tablet-up {
+      padding: 0rem;
+      width: 100%;
     }
   }
 }

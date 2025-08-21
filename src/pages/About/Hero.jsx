@@ -1,10 +1,26 @@
 import React from "react";
 import HeroBackground from "../../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
 import "./hero.scss";
+import { motion } from "motion/react";
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, x: 80 },
+  visible: (delay) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.5, delay },
+  }),
+};
 
 export default function Hero() {
   return (
-    <section className="about__hero">
+    <motion.section
+      className="about__hero"
+      variants={fadeUpVariant}
+      initial="hidden"
+      viewport={{ once: true }}
+      animate={"visible"}
+    >
       <div className="about__content">
         <img src={HeroBackground} alt="" className="about__background" />
         <h1>About Us</h1>
@@ -17,6 +33,6 @@ export default function Hero() {
         </p>
       </div>
       <div className="hero__img"></div>
-    </section>
+    </motion.section>
   );
 }

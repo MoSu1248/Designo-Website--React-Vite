@@ -2,6 +2,10 @@
 
 .nav {
   width: 40%;
+
+  @include for-tablet-up {
+    width: 55%;
+  }
 }
 
 .nav__list {

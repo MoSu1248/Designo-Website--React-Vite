@@ -5,15 +5,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: -80px;
-  left: 50%;
-  width: 1110px;
+  position: absolute;
+  width: 100%;
   height: 18rem;
+  transform: translateY(-250px);
   border-radius: 15px;
   overflow: hidden;
-  transform: translate(-50%, -50%);
-  position: absolute;
   padding: 4rem;
+
+  @include for-tablet-up {
+    text-align: center;
+    
+    gap: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    
+  }
 
   .contact__content {
     color: var(--white);
@@ -23,6 +32,10 @@
       @include h2-styling(var(--white));
       width: 70%;
       margin-bottom: 1rem;
+
+      @include for-tablet-up {
+        width: 100%;
+      }
     }
 
     p {
@@ -39,5 +52,9 @@
   .contact__btn-styling {
     @include white-btn();
     z-index: 2;
+  }
+
+  @include for-tablet-up {
+    width: 100%;
   }
 }

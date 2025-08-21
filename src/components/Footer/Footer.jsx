@@ -9,8 +9,8 @@ import "./footer.scss";
 export default function Footer() {
   return (
     <footer className="footer">
-      <Contact />
       <div className="footer-container">
+      <Contact />
         <FooterNav />
         <div className="footer__content">
           <FooterInfo />

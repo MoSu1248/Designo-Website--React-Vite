@@ -1,4 +1,10 @@
+@use "../../styles/index" as *;
+
 .content-wrapper {
-   max-width: 1110px;        
-   margin: 0 auto;    
+  max-width: 1110px;
+  margin: 0 auto;
+
+  @include for-tablet-up {
+    width: 95%;
+  }
 }

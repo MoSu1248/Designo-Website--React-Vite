@@ -1,20 +1,28 @@
-@use '../../styles/variables' as * ;
+@use "../../styles/index" as *;
 
+.footer {
+  background-color: var(--black);
+  padding-top: 5rem;
+  margin-top: 20rem;
 
-.footer{
-    background-color: var(--black);
-     padding-top: 5rem;
-     position: relative;
+  @include for-tablet-up {
+    margin-top: 35rem;
+  }
 
-    .footer__content{
-        border-top: 1px solid var(--lightest-grey);
-        display: flex;
-        justify-content: space-between;
-    }
- 
-}   
+  width: 100%;
+  .footer__content {
+    border-top: 1px solid var(--lightest-grey);
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
-.footer-container{
-          max-width: 1110px;        
-          margin: 0 auto; 
-    }
+.footer-container {
+  max-width: 1110px;
+  margin: 0 auto;
+  position: relative;
+
+  @include for-tablet-up {
+    width: 95%;
+  }
+}

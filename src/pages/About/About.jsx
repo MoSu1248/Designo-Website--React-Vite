@@ -1,6 +1,5 @@
 import React from "react";
 import Locations from "../../components/Locations/Locations";
-
 import Hero from "./Hero";
 import Objective from "./Objective";
 import Talent from "./Talent";
