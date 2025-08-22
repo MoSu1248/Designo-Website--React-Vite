@@ -12,6 +12,10 @@
     flex-direction: column;
     gap: 2rem;
   }
+
+  @include for-mobile-up {
+    height: fit-content;
+  }
 }
 
 .details__content {
@@ -22,12 +26,19 @@
   text-align: center;
   gap: 2rem;
 
-   @include for-tablet-up {
-     
+  @include for-tablet-up {
     text-align: left;
- 
+
     flex-direction: row;
     gap: 2rem;
+  }
+
+  @include for-mobile-up {
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    gap: 3rem;
   }
 
   &-img {
@@ -68,5 +79,9 @@
   p {
     font-size: var(--p-font-size);
     font-weight: var(--font-weight-regular);
+
+    @include for-mobile-up {
+      font-size: 16px;
+    }
   }
 }

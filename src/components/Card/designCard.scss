@@ -11,6 +11,14 @@
     height: 30rem;
     display: flex;
   }
+
+  @include for-mobile-up {
+    margin: auto;
+    width: 85%;
+    height: 40rem;
+    flex-direction: column;
+  }
+
   img {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -22,8 +30,17 @@
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
       max-height: 100%;
-      display: flex;
       width: 50%;
+    }
+
+    @include for-mobile-up {
+      margin: auto;
+      width: 100%;
+      height: 65%;
+      margin: 0;
+      border: 0;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
     }
   }
 

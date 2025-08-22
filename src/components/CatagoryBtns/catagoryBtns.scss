@@ -14,6 +14,14 @@
       height: 50vh;
       flex-direction: column;
       gap: 2rem;
+
+      h2{
+        font-size: 1.75rem;
+      }
+    }
+
+    @include for-mobile-up{
+      height: 70vh;
     }
 
   .card__app-designs {
@@ -28,7 +36,5 @@
     background-image: url(../../assets/home/desktop/image-graphic-design.jpg);
   }
 
-  .card__test {
-    background-color: red;
-  }
+
 }

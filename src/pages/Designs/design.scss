@@ -6,6 +6,8 @@
   flex-direction: column;
   gap: 8rem;
 
+ 
+
   .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,5 +19,8 @@
       flex-direction: column;
     }
 
+    @include for-mobile-up {
+      gap: 4rem;
+    }
   }
 }

@@ -8,12 +8,24 @@
   gap: 1rem;
   width: 50%;
   padding: 3rem 7rem 2rem 0.8rem;
+  z-index: 2;
+
+  @include for-tablet-up {
+    margin-top: 3rem;
+    gap: 1rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  @include for-mobile-up {
+    padding: 0;
+  }
 
   .conntactUs__form-input {
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--white);
-    
+
     color: var(--white);
     padding: 1rem 0.8rem;
     font-family: var(--font-family);
@@ -49,11 +61,21 @@
     resize: none;
     height: 6rem;
     font-family: var(--font-family);
+
+    @include for-tablet-up {
+      height: 10rem;
+      width: 100%;
+    }
   }
 
   button {
     @include white-btn();
     margin-left: auto;
-    margin-top: 1rem;
+    margin-top: 3rem;
+
+    @include for-mobile-up {
+      margin: auto;
+      margin-top: 2rem;
+    }
   }
 }

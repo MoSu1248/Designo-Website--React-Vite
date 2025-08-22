@@ -9,10 +9,15 @@
   gap: 2rem;
   height: 70vh;
   @include for-tablet-up {
- 
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    height: 80vh;
+  }
+
+   @include for-mobile-up {
+    margin-bottom: 15rem;
+    
   }
 }
 
@@ -33,6 +38,11 @@
   cursor: pointer;
   text-decoration: none;
   height: 100%;
+
+  @include for-mobile-up {
+    margin: auto;
+    width: 85%;
+  }
 
   &::after {
     content: "";
@@ -109,6 +119,19 @@
     }
     &.card_app {
       background-image: url(../../assets/home/tablet/image-graphic-design.jpg);
+    }
+  }
+
+  @include for-mobile-up {
+    height: 35vh !important;
+    &.card_web {
+      background-image: url(../../assets/home/mobile/image-web-design.jpg);
+    }
+    &.card_graphic {
+      background-image: url(../../assets/home/mobile/image-app-design.jpg);
+    }
+    &.card_app {
+      background-image: url(../../assets/home/mobile/image-graphic-design.jpg);
     }
   }
 }

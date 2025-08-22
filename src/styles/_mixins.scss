@@ -5,6 +5,10 @@
   font-weight: var(--font-weight-regular);
   line-height: map-get($map: $text-line-height, $key: h1);
   color: $color;
+
+  @include for-mobile-up {
+    font-size: 32px;
+  }
 }
 
 @mixin h2-styling($color: white) {
@@ -47,6 +51,7 @@
   text-decoration: none;
   text-align: center;
   font-size: 15px;
+  z-index: 1;
   &:hover {
     background-color: var(--peach-light);
     color: var(--white);
@@ -73,6 +78,12 @@
   &:hover {
     background-color: var(--peach-light);
   }
+}
+
+@mixin about-tablet-radius() {
+  border-radius: 0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 @mixin for-desktop-up {

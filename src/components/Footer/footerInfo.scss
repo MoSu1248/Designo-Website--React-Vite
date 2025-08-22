@@ -1,12 +1,23 @@
-@use '../../styles/variables' as * ;
+@use "../../styles/index" as *;
 
-/* FOOTER INFO STYLING */    
-    .info{
-        color: var(--light-grey);
-        width: 50%;
-        display: flex;
-        justify-content: space-between;
-        padding: 3rem  0 4rem 0;
-        font-size: var(--p-font-size );
-        line-height: map-get($map: $text-line-height, $key:p1 );
+/* FOOTER INFO STYLING */
+.info {
+  color: var(--light-grey);
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0 4rem 0;
+  font-size: var(--p-font-size);
+  line-height: map-get($map: $text-line-height, $key: p1);
+
+  @include for-mobile-up {
+    flex-direction: column;
+
+    width: 100%;
+    text-align: center;
+
+    .info__contact {
+      margin-top: 3rem;
     }
+  }
+}

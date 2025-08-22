@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./location.scss";
-import { info } from "../../data/Destinations";
+import { info } from "../../data/LocationsData.js";
 import InformationBack from "../../assets/shared/desktop/bg-pattern-two-circles.svg";
 import { motion } from "framer-motion";
 

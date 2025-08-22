@@ -1,16 +1,17 @@
 import React from "react";
 import Locations from "../../components/Locations/Locations";
-import Hero from "./Hero";
-import Objective from "./Objective";
-import Talent from "./Talent";
+import AboutCard from "./AboutCard";
+import { aboutData } from "../../data/AboutData";
 
 export default function About() {
+  const data = aboutData;
+
   return (
-    <main className="main">
-      <Hero />
-      <Talent />
+    <main className="main__about">
+      <AboutCard {...data[0]} />
+      <AboutCard {...data[2]} />
       <Locations />
-      <Objective />
+      <AboutCard {...data[1]} />
     </main>
   );
 }

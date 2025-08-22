@@ -8,25 +8,37 @@
   position: absolute;
   width: 100%;
   height: 18rem;
-  transform: translateY(-250px);
+  transform: translateY(-220px);
   border-radius: 15px;
   overflow: hidden;
   padding: 4rem;
 
   @include for-tablet-up {
     text-align: center;
-    
+    transform: translateY(-250px);
     gap: 2rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     height: 20rem;
-    
+  }
+
+  @include for-mobile-up {
+    justify-content: center;
+    padding: 5rem 0;
+    height: fit-content;
+    width: 85% !important;
+    margin-left: calc((100% - 85%) / 2);
+    transform: translateY(-500px);
   }
 
   .contact__content {
     color: var(--white);
     width: 50%;
+
+    @include for-mobile-up {
+      width: 100% !important;
+    }
 
     h2 {
       @include h2-styling(var(--white));
@@ -34,12 +46,23 @@
       margin-bottom: 1rem;
 
       @include for-tablet-up {
-        width: 100%;
+        width: 100% !important;
+      }
+
+      @include for-mobile-up {
+        width: 70% !important;
+        margin: auto;
+        font-size: 2rem
       }
     }
 
     p {
       @include p-styling(var(--white));
+      @include for-mobile-up {
+        width: 70% !important;
+        margin: auto;
+        margin-top: 2rem;
+      }
     }
   }
 

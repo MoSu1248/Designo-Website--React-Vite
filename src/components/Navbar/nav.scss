@@ -6,6 +6,10 @@
   @include for-tablet-up {
     width: 55%;
   }
+
+  @include for-mobile-up {
+    display: none;
+  }
 }
 
 .nav__list {

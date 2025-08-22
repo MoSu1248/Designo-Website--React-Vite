@@ -17,6 +17,10 @@
     }
   }
 
+  @include for-mobile-up{
+    margin-bottom: 50rem;
+  }
+
   .canada:after {
     transform: rotate(90deg); /* rotation */
   }

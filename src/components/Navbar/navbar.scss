@@ -6,6 +6,17 @@
   align-items: center;
   padding: 3rem 0rem;
 
+  @include for-mobile-up {
+    padding: 2rem 2rem;
+
+    .logo {
+      height: 2.5rem !important;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
   .logo {
     height: 1.6rem;
     img {
