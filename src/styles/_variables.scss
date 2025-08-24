@@ -10,10 +10,10 @@
   --black: #1d1c1e;
   --dark-grey: #333136;
   --white: #ffffff;
-  --background-grey:#FDF3F0; 
+  --background-grey: #fdf3f0;
   --light-grey: #f1f3f5;
   --ligher-grey: #ffffff;
-  --lightest-grey:rgba(255, 255, 255, 0.486); 
+  --lightest-grey: rgba(255, 255, 255, 0.486);
 
   /* Typography */
 
@@ -31,7 +31,7 @@
 /* SCSS VARIABLES  */
 
 /* Breakpoints */
-$bp-mobile: 37.5em; // 600px
+$bp-mobile: 40.625em; // 600px
 $bp-tablet: 56.25em; // 900px
 $bp-desktop: 75em; // 1200px
 

@@ -3,7 +3,7 @@ import InformationBack from "../../assets/shared/desktop/bg-pattern-two-circles.
 import "./aboutCard.scss";
 import { motion } from "framer-motion";
 
-export default function AboutCard({ content, title, images }) {
+export default function AboutCard({ content, title, images, order }) {
   const [isChildInView, setIsChildInView] = useState(false);
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   const newTitle = title.toLowerCase().trim().replace(/\s+/g, "-");
@@ -16,43 +16,50 @@ export default function AboutCard({ content, title, images }) {
   }, []);
 
   let imgSrc;
+  let backSrc;
 
-  if (viewportWidth <= 600) {
+  if (viewportWidth <= 650) {
     imgSrc = images.mobile;
+    backSrc = images.mobilebackground;
   } else if (viewportWidth <= 900) {
     imgSrc = images.tablet;
+    backSrc = images.background;
   } else {
+    backSrc = images.background;
+
     imgSrc = images.desktop;
   }
 
   const fadeUpVariant = {
-    hidden: { opacity: 0, x: -80 },
+    hidden: { opacity: 0, x: -20 },
     visible: (delay) => ({
       opacity: 1,
       x: 0,
       transition: { duration: 0.5, delay },
     }),
   };
+
   return (
     <motion.section
       className={`about-card ${newTitle}`}
       variants={fadeUpVariant}
-      viewport={{ once: true }}
+      viewport={{ once: true, margin: "500px" }}
       initial="hidden"
       animate={isChildInView ? "visible" : "hidden"}
     >
-      <div className={`about-card__content`}>
+      <motion.div
+        className={`about-card__content`}
+        onViewportEnter={() => setIsChildInView(true)}
+      >
         <h1>{title}</h1>
         <p>{content.text_1}</p>
-        <motion.p onViewportEnter={() => setIsChildInView(true)}>
-          {content.text_2}
-        </motion.p>
+        <p>{content.text_2}</p>
         <img
-          src={images.background}
+          src={backSrc}
           alt=""
           className={`about-card__text-background ${newTitle}__text-background`}
         />
-      </div>
+      </motion.div>
       <div className={` about-card__img`}>
         <img src={imgSrc} alt="" />
       </div>

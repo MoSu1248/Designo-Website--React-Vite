@@ -13,6 +13,7 @@ export const aboutData = [
       tablet: images.heroTablet,
       mobile: images.heroMobile,
       background: images.HeroBackground,
+      mobilebackground: images.HeroBackgroundmobile,
     },
   },
 
@@ -29,6 +30,7 @@ export const aboutData = [
       tablet: images.realTablet,
       mobile: images.realMobile,
       background: images.InformationBack,
+      mobilebackground: images.OtherBackgroundmobile,
     },
   },
   {
@@ -44,6 +46,7 @@ export const aboutData = [
       tablet: images.worldTablet,
       mobile: images.worldMobile,
       background: images.InformationBack,
+      mobilebackground: images.OtherBackgroundmobile,
     },
   },
 ];

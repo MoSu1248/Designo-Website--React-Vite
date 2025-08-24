@@ -33,6 +33,13 @@
     position: absolute;
     height: 130%;
     bottom: 0;
+
+    @include for-mobile-up {
+      width: 60rem;
+      bottom: 0;
+      top: 0px;
+      left: 0px;
+    }
   }
 }
 

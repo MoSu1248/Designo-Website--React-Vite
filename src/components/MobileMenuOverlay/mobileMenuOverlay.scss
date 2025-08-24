@@ -1,0 +1,30 @@
+@use "../../styles/index" as *;
+
+.mobileMenuOverlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: #353636a2;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.mobileMenuOverlay__list {
+  width: 100%;
+  background-color: var(--black);
+  padding: 0 2rem;
+  list-style: none;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .mobileMenuOverlay__list-item {
+    .mobileMenuOverlay__link {
+      text-transform: uppercase;
+      font-size: 24px;
+      color: var(--white);
+      text-decoration: none;
+    }
+  }
+}

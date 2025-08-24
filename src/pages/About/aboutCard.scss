@@ -49,7 +49,7 @@
     flex-direction: column;
     position: relative;
     gap: 1rem;
-    
+    overflow: hidden;
 
     @include for-tablet-up {
       padding: 2rem 5.2rem;
@@ -62,19 +62,17 @@
     }
 
     @include for-mobile-up {
-       padding: 1rem 0 3rem 0 ;
-      width: 85%;
+      padding: 1rem 0 3rem 0;
+      width: 100%;
       margin: 3rem 0;
-      }
+    }
 
     .about-card__text-background {
       position: absolute;
-      bottom: 0;
-      left: 0;
 
       @include for-tablet-up {
-        left: 250px;
-        bottom: 50px;
+        // left: 250px;
+        // bottom: 50px;
       }
     }
 
@@ -126,18 +124,10 @@
   margin-top: 2rem;
 
   .about-card__content {
-    overflow: hidden;
+    padding: 8rem 4rem;
     position: relative;
     h1 {
       color: white;
-    }
-
-    .about-us__text-background {
-      z-index: 0;
-      position: absolute;
-      left: 0px;
-      top: -150px;
-      height: 130%;
     }
   }
 
@@ -149,11 +139,9 @@
       padding-top: 5rem;
       height: 50%;
       margin-top: 0;
-
-   
     }
 
-    @include for-mobile-up{
+    @include for-mobile-up {
       padding-bottom: 2rem;
     }
 
@@ -167,6 +155,20 @@
 
     p {
       width: 100%;
+    }
+  }
+
+  .about-us__text-background {
+    z-index: 0;
+
+    left: -10px;
+    top: -150px;
+    height: 130%;
+
+    @include for-mobile-up {
+      top: -150px;
+      height: 70rem;
+      left: -500px;
     }
   }
 }
@@ -185,6 +187,20 @@
     }
   }
   .about-card__content {
+    @include for-mobile-up {
+      margin: 0;
+      padding: 6rem 2rem;
+    }
+
+    .the-real-deal__text-background {
+      left: 0;
+      bottom: 0;
+
+      @include for-mobile-up {
+        left: 100px;
+        bottom: -100px;
+      }
+    }
   }
 
   .about-card__img {
@@ -211,6 +227,17 @@
       img {
         @include about-tablet-radius;
       }
+    }
+  }
+
+  .about-card__content {
+    @include for-mobile-up {
+      margin: 0;
+      padding: 6rem 2rem;
+    }
+    .world-class-talent__text-background {
+      left: 0;
+      bottom: 0;
     }
   }
 

@@ -13,6 +13,9 @@ import worldMobile from "../assets/about/mobile/image-world-class-talent.jpg";
 import HeroBackground from "../assets/about/desktop/bg-pattern-hero-about-desktop.svg";
 import InformationBack from "../assets/shared/desktop/bg-pattern-two-circles.svg";
 
+import HeroBackgroundmobile from "../assets/about/mobile/bg-pattern-hero-about-mobile.svg";
+import OtherBackgroundmobile from "../assets/shared/desktop/bg-pattern-three-circles.svg";
+
 export const images = {
   heroDesktop,
   heroMobile,
@@ -25,4 +28,6 @@ export const images = {
   worldTablet,
   HeroBackground,
   InformationBack,
+  HeroBackgroundmobile,
+  OtherBackgroundmobile,
 };

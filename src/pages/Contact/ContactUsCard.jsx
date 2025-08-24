@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CardBackground from "../../assets/contact/desktop/bg-pattern-hero-desktop.svg";
+import MobileCardBackground from "../../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg";
 import "./contactUsCard.scss";
 import ContactForm from "./ContactForm";
 import { motion } from "framer-motion";
-
 export default function ContactUsCard() {
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  let backSrc;
+
+  if (viewportWidth <= 650) {
+    backSrc = MobileCardBackground;
+  } else {
+    backSrc = CardBackground;
+  }
+
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 20 },
     visible: (delay) => ({
@@ -25,7 +41,7 @@ export default function ContactUsCard() {
 
   return (
     <div className="contactUs__card">
-      <img src={CardBackground} alt="" className="contactUs__card-background" />
+      <img src={backSrc} alt="" className="contactUs__card-background" />
       <div className="contactUs__text">
         <motion.h1
           variants={fadeUpVariant}

@@ -45,6 +45,7 @@ export default function ContactForm() {
         id=""
         placeholder="Your message"
       ></motion.textarea>
+
       <button>Submit</button>
     </form>
   );

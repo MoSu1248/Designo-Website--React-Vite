@@ -52,7 +52,7 @@
       @include for-mobile-up {
         width: 70% !important;
         margin: auto;
-        font-size: 2rem
+        font-size: 2rem;
       }
     }
 
@@ -66,10 +66,22 @@
     }
   }
 
-  .contact__background {
+  .banner__background {
     z-index: 1;
     position: absolute;
     right: 0;
+
+    @include for-tablet-up {
+      right: 0px;
+      top: -100px;
+    }
+
+    @include for-mobile-up {
+      height: 200%;
+      right: 0px;
+
+      width: 220%;
+    }
   }
 
   .contact__btn-styling {
