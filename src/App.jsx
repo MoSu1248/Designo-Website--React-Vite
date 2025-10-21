@@ -15,7 +15,6 @@ function App() {
     <BrowserRouter basename="/Designo-Website--React-Vite">
       <Routes>
         <Route path="/" element={<Layout />}>
-          
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="location" element={<Locations />} />

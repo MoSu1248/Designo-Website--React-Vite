@@ -1,9 +1,9 @@
-@use "./variables" as *;
+@use "./variables" as vars;
 
 @mixin h1-styling($color: white) {
   font-size: var(--h1-font-size);
   font-weight: var(--font-weight-regular);
-  line-height: map-get($map: $text-line-height, $key: h1);
+  line-height: map-get($map: vars.$text-line-height, $key: h1);
   color: $color;
 
   @include for-mobile-up {
@@ -15,15 +15,15 @@
   z-index: 1;
   font-weight: var(--font-weight-medium);
   font-size: var(--h2-font-size);
-  letter-spacing: map-get($map: $letter-spacing, $key: h2);
-  line-height: map-get($map: $text-line-height, $key: h2);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h2);
+  line-height: map-get($map: vars.$text-line-height, $key: h2);
   color: $color;
 }
 
 @mixin h3-styling($color: white) {
   font-size: var(--h3-font-size);
   font-weight: var(--font-weight-medium);
-  letter-spacing: map-get($map: $letter-spacing, $key: h3);
+  letter-spacing: map-get($map: vars.$letter-spacing, $key: h3);
   color: $color;
 }
 
@@ -87,19 +87,19 @@
 }
 
 @mixin for-desktop-up {
-  @media (max-width: $bp-desktop) {
+  @media (max-width: vars.$bp-desktop) {
     @content; // This allows you to inject whatever styles you want inside
   }
 }
 
 @mixin for-tablet-up {
-  @media (max-width: $bp-tablet) {
+  @media (max-width: vars.$bp-tablet) {
     @content; // This allows you to inject whatever styles you want inside
   }
 }
 
 @mixin for-mobile-up {
-  @media (max-width: $bp-mobile) {
+  @media (max-width: vars.$bp-mobile) {
     @content; // This allows you to inject whatever styles you want inside
   }
 }
